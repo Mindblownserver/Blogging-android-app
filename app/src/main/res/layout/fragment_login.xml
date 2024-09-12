@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@id/center"
+            android:text="@string/signin"
+            android:textAlignment="center"
+            android:textColor="@color/soretrak"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textColor="@color/soretrak"
+            android:layout_marginTop="70dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/username"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:background="@drawable/my_input_text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signin"
+            android:drawableStart="@drawable/custom_person_icon"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:hint="Username"
+            android:textColor="@color/black"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:drawablePadding="10dp"
+            android:background="@drawable/my_input_text"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:ems="10"
+            android:textSize="20sp"
+            android:hint="Password"
+            android:drawableStart="@drawable/custom_password_icon"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_below="@id/password"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_btn"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/custom_text_color"
+            android:paddingHorizontal="20dp"
+            android:id="@+id/signInBtn"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

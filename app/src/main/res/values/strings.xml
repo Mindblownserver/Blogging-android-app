@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hello World Java</string>
+    <string name="signin">Sign in to continue\n</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="credit">Developed by Mohamed Yassine Kharrat</string>
+</resources>
