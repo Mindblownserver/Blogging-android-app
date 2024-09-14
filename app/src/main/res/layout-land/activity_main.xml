@@ -18,10 +18,4 @@
         app:navGraph="@navigation/my_nav"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="1dp" />
-    <include
-        layout="@layout/trademark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

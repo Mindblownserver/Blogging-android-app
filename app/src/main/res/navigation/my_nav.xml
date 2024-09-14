@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.helloworldjava.LoginFragment"
+        android:name="com.example.helloworldjava.ProfileFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment"
