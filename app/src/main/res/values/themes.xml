@@ -7,8 +7,10 @@
     <style name="SplashStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
-    <style name="MainTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
-
+    <style name="MainTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/soretrak</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/black</item>
     </style>
     <style name="Theme.HelloWorldJava" parent="Base.Theme.HelloWorldJava" />
 </resources>
