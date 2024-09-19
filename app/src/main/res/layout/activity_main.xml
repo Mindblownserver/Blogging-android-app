@@ -9,8 +9,13 @@
 
     >
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:layout_marginTop="?attr/actionBarSize"
         android:id="@+id/nav_host_fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
@@ -28,13 +33,15 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:itemRippleColor="@color/soretrakNotFocused"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="?android:attr/windowBackground"
-        app:itemRippleColor="@color/grey"
-
         app:menu="@menu/bottom_nav_menu" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
