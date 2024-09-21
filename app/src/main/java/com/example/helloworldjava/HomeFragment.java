@@ -5,11 +5,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +31,8 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private RecyclerView blogRecView;
+    private ArrayList<Blog> blogs;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -62,14 +68,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        getParentFragmentManager().setFragmentResultListener("user", this, new FragmentResultListener() {
-            @Override
-            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
-                String username = result.getString("username");
-                TextView helloTxt = view.findViewById(R.id.welcomeTxt);
-                helloTxt.setText(String.format("Welcome abroad %s", username));
-            }
-        });
+        // setting up Recycler view
+        blogRecView = view.findViewById(R.id.blog_rec_view);
+        blogs = new ArrayList<>();
+        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
+        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
+        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
+        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
+        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
+        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
+
+        BlogRecViewAdapter adapter = new BlogRecViewAdapter();
+        adapter.setBlogs(blogs);
+        blogRecView.setAdapter(adapter);
+        blogRecView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         return view;
     }
 }

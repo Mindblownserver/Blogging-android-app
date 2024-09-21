@@ -6,4 +6,7 @@
     <color name="soretrakNotFocused">#f5ba71</color>
     <color name="grey">#d9d9d9</color>
     <color name="cardBg">#fffbf8</color>
+    <color name="blogTitle">@color/black</color>
+    <color name="blogSubTitle">#333333</color>
+    <color name="blogAuthor">#404040</color>
 </resources>
