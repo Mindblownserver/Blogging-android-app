@@ -22,9 +22,13 @@
         <item name="android:windowExitAnimation">@anim/fade_out</item>
         <item name="cardBackgroundColor">@color/cardBg</item>
     </style>
-
     <style name="MyToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
         <item name="colorControlNormal" >@color/soretrak</item>
+    </style>
+    <style name="BlogPostTheme" parent="MainTheme">
+        <item name="colorPrimary">@color/cardBg</item>
+        <item name="android:textColorPrimary">@color/soretrak</item>
+
     </style>
     <style name="Theme.HelloWorldJava" parent="Base.Theme.HelloWorldJava">
     </style>

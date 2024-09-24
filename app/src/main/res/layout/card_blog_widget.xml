@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/blog_card"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="1dp"
@@ -15,6 +16,7 @@
         android:backgroundTint="@color/cardBg"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/blog_card"
             android:background="@drawable/blog_ripple"
             android:clickable="true"
             android:focusable="true"

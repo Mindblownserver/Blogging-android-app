@@ -1,8 +1,77 @@
 <resources>
+    <!--You need to escape ", ', &, <, and >, line 70 is the problem-->
     <string name="app_name">Hello World Java</string>
     <string name="signin">Sign in to continue\n</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="credit">Developed by Mohamed Yassine Kharrat</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="blog_title">Why do I hate side-quests</string>
+    <string name="blog_subtitle">The Psychology of Side Content</string>
+    <string name="blog_spoiler">Mild spoilers for some side quests in The Legend of Zelda: Breath of the Wild</string>
+    <string name="blog_text">In the game \“The Legend of Zelda: Breath of the Wild\” the warrior Link is woken from a one-hundred year induced homeostatic sleep by a voice calling for him to save the kingdom of Hyrule, and ultimately the world.
+        \“Help me, Obi Wan Kenobi, you are my only hope!\”
+
+        I\’m sure you know this quote as the call to arms from the film \“Star Wars III: A New Hope\” where the aforementioned Obi Wan races across the galaxy to (\“it\’s not a moon!\”) a space-station to (SPOILERS) sacrifice his life to save his friends and- ultimately- the galaxy. He does all this in around 70 minutes.
+        And now, here we are as Link- the champion of Hyrule- setting off on a quest that will ultimately decide the fate of the Kingdom and everything he has ever held dear. The only thing stopping the Kingdom falling against the powers of evil right now is the supposedly perennial adventurer Zelda who is using her powers of magic to keep evil at bay. She cannot defeat the evil, only contain it in the hope that Link can reach this evil and defeat it before her own powers give way.
+        As Link, you are always supposed to be against the clock, regularly being told to hurry as Zelda cannot keep up her efforts of holding back evil for much longer, and that he is the only hope for the kingdom. He must act swiftly before Zelda succumbs to fatigue.
+
+        The stakes are high, the goal is known, the time to act is now.
+
+        \“But, wait!\”, a small, cheerful village resident named Dalia exclaims. \“Don\’t you want to help me grow some melons?\”
+
+        I\’m sorry what did she just say?
+
+        \“Yeah, I wanna grow me some melons, but there\’s something wrong with the water; can you go check it out for me?\” she cheerfully replies. I\’m paraphrasing the cutscene obviously but that\’s the gist.
+
+        \“No, I\’m a bit busy right now\”, I reply tersely, or at least I would had I been Link.
+
+        Perhaps this is why Link still doesn\\’t talk in these games as he would just constantly be saying \“sort it out yourself you lazy sod!\” and his air of mystery and bravery would be somewhat tarnished.
+        \“Hey there!\”, another person shouts, \“do you fancy going on a Safari?\” Link is asked by a small fishy creature called Laflat.
+
+        \“Sorry, what?\”, I imagine Link asking somewhat confusedly.
+
+        \“Yeah, I kind of what a picture of this animal but don\’t fancy doing it myself\”, the aquatic biped responds- I paraphrase here again obviously.
+
+        It is around this point that I imagine Link losing his rag.
+
+        \“Do you know who I am? I\’m the f******* champion of Hyrule! You\’re going to be turned into fish and f****** chips if you don\’t let me crack on!\”
+
+        Perhaps this was the original written line for the script but it didn\’t get past Nintendo\’s lawyers… Perhaps this is why Link remains a silent protagonist as he couldn\’t just throw foul-mouthed racist slurs at ever fish you asks for a favour and maintain his heroic image.
+        My point- as you may have guessed from my subtle humorous hinting- is that I found the side quests is Breath of the Wild very silly and annoying on the whole.
+
+        The reasons why are pretty simple. As noted, we as Link are meant to be in a race against time to save the Kingdom. Anything that isn\’t serving that direct goal feels like an unnecessary distraction. In gaming, they often talk about the ‘critical path\’ or ‘golden path\’ being the line of actions/ short term goals a player needs to complete/ achieve to ‘beat the game\’ (usually meaning role credits, though not always).
+
+        ‘Side quests\’ tend to be actions or goals that do not directly serve the player in progressing on the critical path (though may indirectly, such as rewarding the player with improved stats or gear) and are in their nature really just distractions from this. But the main game is basically saying \“don\’t get distracted\”, not \“hey, you have a job to do but there\’s no need to rush; chill and go on a safari for a fish girl\”. If this was the general message I would be less frustrated certainly.
+
+        Secondly, we sold as the ‘champion of Hyrule\’; a kingdom filled with courageous, skilled in combat warriors but we are the scrawny little guy above them all. Fair enough. So, when some little creature thing asks me to fetch 3 doo-dads for their whats-a-ma-jig. My response is \“do it yourself you lazy, bugger!\”
+
+        If Link was a real champion he would be empowering those around him to complete tasks for themselves not fostering utter self-reliance on him the needy little narcissistic!
+
+        So, this combination of distraction work when on a don\’t-get-distracted-quest and menial task giving to the literally most competent person in the kingdom leaves me with a strong sense of dissonance.
+        Cognitive dissonance was a term first coined by the American Social Psychologist Leon Festinger in 1957 to describe the notion of when our actions do not align with our values or motivations. It manifests as discomfort, either mentally or physically or both. Our heads naturally want to reduce this discomfort and so we have two choices; change our actions or change our minds. Think of the person chatting to their friends while sitting in McDonalds, eating a Big Mac then saying \“I really need to get healthy and go on a diet\”. They look down at the handful of carbohydrates, fat and perhaps even protein thing that supposedly passes as a burger and feels a pang of mixed emotions inside, as it begins to dawn on them that their words and actions are in direct conflict. \“Do I put this pile of heart attack down?\”, they perhaps say to themselves, \“I can\’t start being healthy and keep eating this junk…\”. Now a bead of sweat begins to form on their head as they try to square this circular conundrum and the feeling of dissonance gorws; their hand begins to tremble and their brain rushes for an answer to the dilemma.
+
+        \“I\’ll start my health kick… tomorrow!\”, they triumphantly announce to their friends, though in reality more to themselves.
+
+        The discomfort drains and a wave of relief washes over them. They can continue to blissfully consume their burger. The whole thing likely plays out the next day too, but who am I to judge.
+
+        So, many players may choose to stop the side questing. But many (and probably the majority) engage with some form of ‘rationalisation\’ to address this.
+
+        \“It\’s just a game; it\’s just a toy made to have fun with; it doesn\’t have to make complete sense.\”
+
+        \“Lots of these will make me stronger for the final boss\”
+
+        \“Zelda will be fine!\”
+
+        \“These quests are fun and delightful, so I don\’t mind that they sit at odds with the main narrative.\”
+
+        Whatever you tell yourself so you can sleep at night, you filthy animals! I\’ll have no such rationalisation of this nonsense in my house!
+
+        So, I fall into the camp of sticking to the critical path and giving withering looks to anyone who dares make any sort of request of me as I journey across the lands of Hyrule.
+
+        That\’s how I feel about this. You might feel different and that is OK.
+
+        Feel free to share how your thoughts about this in the comments section below.
+
+        If you would like to keep up to date with posts on this site, please consider following me on X @gamefeeluk
+    </string>
+    <string name="notes">\'untitled, unmastered.\' is a compilation of music created and performed during the \'To Pimp and Butterfly\' recording sessions, that were originally left on the cutting room floor. \'untitled\' is an album loved by fans of Lamar but certainly no-one is screaming for it to have been added to \'To Pimp a Butterfly\' itself.</string>
 </resources>

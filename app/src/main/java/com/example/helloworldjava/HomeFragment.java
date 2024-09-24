@@ -83,6 +83,13 @@ public class HomeFragment extends Fragment {
         blogRecView.setAdapter(adapter);
         blogRecView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+//        view.findViewById(R.id.blog_card).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
+
         return view;
     }
 }

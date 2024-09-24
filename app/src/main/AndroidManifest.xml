@@ -12,22 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/MainTheme">
         <activity
+            android:name=".BlogPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingsActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true"

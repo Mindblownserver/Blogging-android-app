@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.navigation.Navigation;
+
 
 public class LoginActivity extends AppCompatActivity {
     public boolean isShown = false;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         findViewById(R.id.signInBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     usernameInput.setText("");
                     passwordInput.setText("");
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, BlogPostActivity.class);
                     startActivity(intent);
                     finish();
                 }else{
@@ -49,12 +51,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText passwordInput =findViewById(R.id.password);
-                if(isShown){
+                if(!isShown){
                     passwordInput.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_NORMAL);
-                    Toast.makeText(LoginActivity.this, "Password", Toast.LENGTH_SHORT).show();
                 }else{
                     passwordInput.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    Toast.makeText(LoginActivity.this, "Text", Toast.LENGTH_SHORT).show();
                 }
                 isShown=!isShown;
             }

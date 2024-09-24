@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="soretrak">#fb8c00</color>
+    <color name="cardBg">#fffbf8</color>
+    <color name="blog_properties">#333333</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="soretrak">#fb8c00</color>
     <color name="soretrakNotFocused">#f5ba71</color>
     <color name="grey">#d9d9d9</color>
-    <color name="cardBg">#fffbf8</color>
     <color name="blogTitle">@color/black</color>
     <color name="blogSubTitle">#333333</color>
     <color name="blogAuthor">#404040</color>
+    <color name="whiteFr">#aaFFFFFF</color>
+    <color name="cardBgFr">#00fffbf8</color>
 </resources>
