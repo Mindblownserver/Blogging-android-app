@@ -1,5 +1,6 @@
 package com.example.helloworldjava;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,11 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -37,6 +42,7 @@ public class HomeFragment extends Fragment implements RecyclerItemClickListener.
     private RecyclerView blogRecView;
     private BlogRecViewAdapter adapter;
     private ArrayList<Blog> blogs;
+    private boolean isBlogCLicked = false;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -75,12 +81,12 @@ public class HomeFragment extends Fragment implements RecyclerItemClickListener.
         // setting up Recycler view
         blogRecView = view.findViewById(R.id.blog_rec_view);
         blogs = new ArrayList<>();
-        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
-        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
-        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
-        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Mohamed Yassine Kharrat", "7", "Aug 31 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
-        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
-        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
+        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Graham Walker", "7" + " min read", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
+        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7"+ " min read", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
+        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7"+ " min read", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
+        blogs.add(new Blog("Why I hate Side-Quests", "The Psychology of Side Content", "Mohamed Yassine Kharrat", "7"+ " min read", "Aug 31 2024", "https://static.wixstatic.com/media/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png/v1/fill/w_420,h_235,al_c,lg_1,q_85,enc_auto/1fc4a4_3d816b3c490444c58ba4898419e7d35a~mv2.png"));
+        blogs.add(new Blog("Dredge: Why Your Brain is Your Worst Enemy and Best Friend", "What Dredge teaches us about how the brain responds to threat", "Graham Walker", "7"+ " min read", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png/v1/fill/w_337,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_0d4993347c0b4eeca6fe57e3a938e05a~mv2.png"));
+        blogs.add(new Blog("Why don’t videogames give you PTSD?", "And what this teaches us Post Traumatic Stress Disorder", "Graham Walker", "7"+ " min read", "Aug 29 2024", "https://static.wixstatic.com/media/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png/v1/fill/w_596,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1fc4a4_ad944cc53f9e4ca79f33db23f4b5e5c8~mv2.png"));
 
         adapter = new BlogRecViewAdapter();
         adapter.setBlogs(blogs);
@@ -100,10 +106,33 @@ public class HomeFragment extends Fragment implements RecyclerItemClickListener.
 
     @Override
     public void onItemCLick(View view, int position) {
-        Intent intent = new Intent(this.getActivity(), BlogPostActivity.class);
-        intent.putExtra(BLOG_FIELD, adapter.getChildByPos(position));
+        if(!isBlogCLicked){
+            ImageView img = view.findViewById(R.id.blog_img);
+            TextView title = view.findViewById(R.id.blog_title);
+            TextView author = view.findViewById(R.id.blog_author);
+            TextView readTime = view.findViewById(R.id.blog_read_time);
+            TextView publishDate = view.findViewById(R.id.blog_publish_date);
+            Intent intent = new Intent(this.getActivity(), BlogPostActivity.class);
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(),
+                    Pair.create(img, "blog_img_trans"),
+                    Pair.create(title, "blog_title_trans"),
+                    Pair.create(author, "blog_author_trans"),
+                    Pair.create(readTime,"blog_read_time_trans"),
+                    Pair.create(publishDate, "blog_date_trans"));
+            intent.putExtra(BLOG_FIELD, adapter.getChildByPos(position));
 
-        startActivity(intent);
+            startActivity(intent, options.toBundle());
+            isBlogCLicked = true;
+        }
+        else{
+            Toast.makeText(getContext(), "slow there, tiger", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        isBlogCLicked=false;
+        super.onResume();
     }
 
     @Override

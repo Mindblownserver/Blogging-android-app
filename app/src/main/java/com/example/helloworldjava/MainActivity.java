@@ -80,25 +80,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onResume() {
-        if(firstTimeOpening)
-            firstTimeOpening= false;
-        else
-            Toast.makeText(this, "I see that you came back! :D", Toast.LENGTH_SHORT).show();
 
-        super.onResume();
-    }
-
-    @Override
-    protected void onStop() {
-        Toast.makeText(this, "Ohh, you're leaving me alone? :(", Toast.LENGTH_SHORT).show();
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        Toast.makeText(this, "Make sure to pay me a visit, sometime soon...", Toast.LENGTH_LONG).show();
-        super.onDestroy();
-    }
 }

@@ -29,6 +29,7 @@
                 android:foreground="@drawable/blog_image_background"
                 android:src="@mipmap/blog_img"
                 android:scaleType="centerCrop"
+                android:transitionName="blog_img_trans"
                 app:layout_collapseMode="parallax" />
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -36,7 +37,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/nav_up_btn"
+                android:theme="@style/MyToolbarStyle"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
                 />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -69,6 +72,7 @@
 
                 <TextView
                     android:id="@+id/blog_author"
+                    android:transitionName="blog_author_trans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:drawableEndCompat="@drawable/ic_seperate_properties"
@@ -80,6 +84,7 @@
 
                 <TextView
                     android:id="@+id/blog_date"
+                    android:transitionName="blog_date_trans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:drawableEndCompat="@drawable/ic_seperate_properties"
@@ -93,6 +98,7 @@
 
                 <TextView
                     android:id="@+id/blog_read_time"
+                    android:transitionName="blog_read_time_trans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/blog_seperater_padding"
@@ -116,6 +122,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/blog_title"
+                    android:transitionName="blog_text_trans"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:textColor="@color/blogTitle"

@@ -48,14 +48,14 @@ public class BlogPostActivity extends AppCompatActivity implements DataFields{
             title.setText(blog.getTitle());
             subTitle.setText(blog.getSubtitle());
             author.setText(blog.getAuthor());
-            readTime.setText(blog.getReadTime());
+            readTime.setText(String.format(blog.getReadTime()));
             publishDate.setText(blog.getPublishDate());
         }
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()== android.R.id.home){
-            finish();
+            finishAfterTransition();
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in);
             return true;
         }

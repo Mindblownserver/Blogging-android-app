@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="blog_properties">13sp</dimen>
+    <dimen name="blog_properties">12sp</dimen>
     <dimen name="blog_seperater_padding">4dp</dimen>
     <dimen name="blog_text">33dp</dimen>
 </resources>
