@@ -1,6 +1,10 @@
 package com.example.helloworldjava;
 
-public class Blog{
+import java.io.Serializable;
+
+public class Blog implements Serializable {
+    private static final long  serialVersionUID = 1L;
+
     private String title;
     private String author;
     private String subtitle;

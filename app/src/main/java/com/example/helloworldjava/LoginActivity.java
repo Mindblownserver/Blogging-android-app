@@ -22,11 +22,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         findViewById(R.id.signInBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     usernameInput.setText("");
                     passwordInput.setText("");
-                    Intent intent = new Intent(LoginActivity.this, BlogPostActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }else{

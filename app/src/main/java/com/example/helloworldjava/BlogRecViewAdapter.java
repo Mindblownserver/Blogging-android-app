@@ -38,6 +38,11 @@ public class BlogRecViewAdapter extends RecyclerView.Adapter<BlogRecViewAdapter.
     public int getItemCount() {
         return blogList.size();
     }
+
+    public Blog getChildByPos(int position){
+        return  blogList.get(position);
+    }
+
     public void setBlogs(ArrayList<Blog> blogList){
         this.blogList = blogList;
         notifyDataSetChanged();

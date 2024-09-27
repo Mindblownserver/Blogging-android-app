@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:fitsSystemWindows="false"
-        android:theme="@style/BlogPostTheme">
+        android:theme="@style/BlogPostTheme"
+        >
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,7 +35,9 @@
                 android:fitsSystemWindows="true"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/nav_up_btn"
+                />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -43,6 +46,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:background="@drawable/blog_contents"
         android:paddingTop="20dp"
@@ -196,6 +200,7 @@
                     android:text="@string/blog_spoiler"
                     />
                 <TextView
+                    android:lineHeight="@dimen/blog_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/spoiler_txt"
