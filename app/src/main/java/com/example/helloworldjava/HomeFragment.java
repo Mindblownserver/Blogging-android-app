@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -107,22 +108,17 @@ public class HomeFragment extends Fragment implements RecyclerItemClickListener.
     @Override
     public void onItemCLick(View view, int position) {
         if(!isBlogCLicked){
+            isBlogCLicked = true;
             ImageView img = view.findViewById(R.id.blog_img);
-            TextView title = view.findViewById(R.id.blog_title);
-            TextView author = view.findViewById(R.id.blog_author);
-            TextView readTime = view.findViewById(R.id.blog_read_time);
-            TextView publishDate = view.findViewById(R.id.blog_publish_date);
+
             Intent intent = new Intent(this.getActivity(), BlogPostActivity.class);
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(),
-                    Pair.create(img, "blog_img_trans"),
-                    Pair.create(title, "blog_title_trans"),
-                    Pair.create(author, "blog_author_trans"),
-                    Pair.create(readTime,"blog_read_time_trans"),
-                    Pair.create(publishDate, "blog_date_trans"));
+                    Pair.create(img, "blog_img_trans"));
             intent.putExtra(BLOG_FIELD, adapter.getChildByPos(position));
 
             startActivity(intent, options.toBundle());
-            isBlogCLicked = true;
+            isBlogCLicked=false;
+
         }
         else{
             Toast.makeText(getContext(), "slow there, tiger", Toast.LENGTH_SHORT).show();

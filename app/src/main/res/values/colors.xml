@@ -12,4 +12,5 @@
     <color name="blogAuthor">#404040</color>
     <color name="whiteFr">#aaFFFFFF</color>
     <color name="cardBgFr">#00fffbf8</color>
+    <color name="containerBg">#AAFFE1BE</color>
 </resources>

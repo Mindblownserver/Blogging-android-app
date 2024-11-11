@@ -23,14 +23,18 @@
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:title="Game Feel"
             >
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:foreground="@drawable/blog_image_background"
                 android:src="@mipmap/blog_img"
+                app:layout_collapseMode="parallax"
                 android:scaleType="centerCrop"
                 android:transitionName="blog_img_trans"
-                app:layout_collapseMode="parallax" />
+                 />
+
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:fitsSystemWindows="true"

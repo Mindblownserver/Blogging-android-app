@@ -2,5 +2,5 @@
 <resources>
     <dimen name="blog_properties">12sp</dimen>
     <dimen name="blog_seperater_padding">4dp</dimen>
-    <dimen name="blog_text">33dp</dimen>
+    <dimen name="blog_text">33sp</dimen>
 </resources>
